@@ -3,6 +3,7 @@ package com.aguiartech.springboot.demo.restapi.rest;
 import java.time.LocalDateTime;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,11 +12,13 @@ import com.aguiartech.springboot.demo.restapi.common.Coach;
 
 @RestController
 public class FunRestController {
-    private Coach myCoach;
-    private Coach yourCoach;
+
+      private Coach myCoach;
     
     @Autowired
-    public FunRestController(Coach theCoach){
+    public FunRestController(@Qualifier("gymCoach")Coach theCoach){
+        System.out.println("in constructor: " + getClass().getSimpleName());
+
         myCoach = theCoach;
     }
     

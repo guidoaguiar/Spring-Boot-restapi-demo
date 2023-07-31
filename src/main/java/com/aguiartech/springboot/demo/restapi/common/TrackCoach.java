@@ -3,15 +3,15 @@ package com.aguiartech.springboot.demo.restapi.common;
 import org.springframework.stereotype.Component;
 
 @Component
-public class CricketCoach implements Coach{
+public class TrackCoach implements Coach{
 
-    public CricketCoach() {
+    public TrackCoach() {
         System.out.println("in constructor: " + getClass().getSimpleName());
     }
 
     @Override
     public String getDailyWorkout() {
-        return "Practice fast bowling for 15 minutes";
+        return "Run a hard 5K";
     }
     
 }
