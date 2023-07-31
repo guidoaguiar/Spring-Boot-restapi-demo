@@ -7,11 +7,12 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.aguiartech.springboot.demo.restapi.Coach;
+import com.aguiartech.springboot.demo.restapi.common.Coach;
 
 @RestController
 public class FunRestController {
     private Coach myCoach;
+    private Coach yourCoach;
     
     @Autowired
     public FunRestController(Coach theCoach){

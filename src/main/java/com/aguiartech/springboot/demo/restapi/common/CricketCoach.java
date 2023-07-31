@@ -1,4 +1,4 @@
-package com.aguiartech.springboot.demo.restapi;
+package com.aguiartech.springboot.demo.restapi.common;
 
 import org.springframework.stereotype.Component;
 
